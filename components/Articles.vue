@@ -1,40 +1,16 @@
 <template>
   <div>
     <div>
-        <div>
+            <h2 class="my-8	text-center	text-5xl font-bold">Últimos Post</h2>
+          <div class="flex flex-row justify-around">
           <router-link v-for="article in articles" :to="{ name: 'articles-id', params: {id: article.id} }" :key="article.id">
-            <div>
-                 <!-- <div v-if="article.image" >
-                     <img :src="api_url + article.image.url" alt="" height="100">
-                 </div> -->
-                 <div>
-                   <!-- <p  v-if="article.category" >{{ article.category.name }}</p> -->
+                  <img :src="api_url + article.image.url" style="width:4rem;" alt="">
+                  <span>{{article.category.name}}</span>
                    <p >{{article.title }}</p>
                    <p>{{article.content}}</p>
-                   <img :src="api_url + article.image.url" style="width:4rem;" alt="">
-                   <span>{{article.category.name}}</span>
-                   <!-- <p>{{article.attributes.content}}</p>
-                   <p>{{article.attributes.image.url}}</p> -->
-                 </div>
-             </div>
          </router-link>
-
-        </div>
-        <div>
-          <div >
-            <!-- <router-link v-for="article in rightArticles" :to="{ name: 'articles-id', params: {id: article.id} }" :key="article.id">
-              <div>
-                   <div v-if="article.image">
-                       <img :src="api_url + article.image.url" alt="" height="100">
-                   </div>
-                   <div >
-                     <p  v-if="article.category">{{ article.category.name }}</p>
-                     <p >{{ article.title }}</p>
-                   </div>
-               </div>
-             </router-link> -->
           </div>
-
+        <div>
         </div>
     </div>
 
