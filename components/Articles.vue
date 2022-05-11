@@ -1,20 +1,15 @@
 <template>
-  <div>
-    <div>
-            <h2 class="my-8	text-center	text-5xl font-bold">Últimos Post</h2>
+    <div class="h-98	">
           <div class="flex flex-row justify-around">
-          <router-link v-for="article in articles" :to="{ name: 'articles-id', params: {id: article.id} }" :key="article.id">
-                  <img :src="api_url + article.image.url" style="width:4rem;" alt="">
-                  <span>{{article.category.name}}</span>
-                   <p >{{article.title }}</p>
-                   <p>{{article.content}}</p>
+          <router-link class="w-1/4 shadow-xl	" v-for="article in articles" :to="{ name: 'articles-id', params: {id: article.id} }" :key="article.id">
+                  <img class="mb-4	" :src="api_url + article.image.url"   alt="">
+                  <div class="p-4">
+                  <span class="p-0.4 bg-red-800 text-sm		text-white">{{article.category.name}}</span>
+                   <p class="mt-4 text-2xl	 font-bold" >{{article.title }}</p>
+                  </div>
          </router-link>
           </div>
-        <div>
-        </div>
     </div>
-
-  </div>
 </template>
 
 <script>
@@ -28,16 +23,6 @@ export default {
   props: {
     articles:Array
   },
-  computed: {
-    // leftArticlesCount(){
-    //   return Math.ceil(this.articles.length / 5)
-    // },
-    // leftArticles(){
-    //   return this.articles.slice(0, this.leftArticlesCount)
-    // },
-    // rightArticles(){
-    //   return this.articles.slice(this.leftArticlesCount, this.articles.length)
-    // }
-  }
+
 }
 </script>

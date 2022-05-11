@@ -1,23 +1,23 @@
 <template>
   <div>
-
     <client-only>
-    <div class="uk-section">
-      <div class="uk-container uk-container-large">
-        <h1>{{ category.name }}</h1>
+    <div>
+      <div class="container mx-auto">
+        <h1 class="text-center my-12	 text-6xl	text-article-title">{{ category.name }}</h1>
 
         <Articles :articles="category.articles || []"></Articles>
 
       </div>
     </div>
   </client-only>
+  <Footer/>
   </div>
 </template>
 
 <script>
 import articlesQuery from '../../apollo/queries/articles/articles--categories'
 import Articles from '../../components/Articles'
-
+import Footer from '../../components/Footer'
 export default {
   data() {
     return {
@@ -25,7 +25,7 @@ export default {
     }
   },
   components: {
-    Articles
+    Articles,Footer
   },
   apollo: {
     category: {

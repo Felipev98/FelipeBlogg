@@ -52,7 +52,8 @@ export default {
     preset: 'default',
     linkify: true,
     breaks: true,
-    injected: true
+    typographer: true,
+    html: false,
   },
   apollo: {  
     clientConfigs: {

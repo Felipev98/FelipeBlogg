@@ -6,16 +6,23 @@
   </div>
   <div class="container mx-auto">
   <Categories />
+  <h2 class="my-8	text-center	text-5xl font-bold">Últimos Post</h2>
   <Articles :articles="articles"/>
+    <div class="text-center	">
+        <Button Entradas="Ver más"/>
+        </div>
   </div>
+  <Footer />
 </div>
 
 </template>
 
 <script>
 import Articles from '../components/Articles.vue'
-import Button from '../components/Button.vue'
+import Footer from '../components/Footer.vue'
 import articlesQuery from '../apollo/queries/articles/Articles'
+import Button from '../components/Button.vue'
+
 export default {
   name: 'IndexPage',
   data() {
@@ -25,7 +32,7 @@ export default {
     }
   },
   components:{
-Articles,Button
+Articles,Button,Footer,Button
   },
     apollo: {
     articles: {
@@ -39,7 +46,5 @@ Articles,Button
 }
 </script>
 <style>
-h1{
-font-family: 'Poppins', sans-serif;
-}
+
 </style>
