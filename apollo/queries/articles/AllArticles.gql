@@ -1,5 +1,5 @@
-query Articles {
-  articles( limit:3, sort:"Publishedat:desc") {
+query Articles($limit:Int, $start:Int,) {
+  articles( limit:$limit, start:$start) {
     id
     title
     content

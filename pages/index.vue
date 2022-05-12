@@ -8,7 +8,7 @@
   <Categories />
   <h2 class="my-8	text-center	text-5xl font-bold">Últimos Post</h2>
   <Articles :articles="articles"/>
-    <div class="text-center	">
+    <div class="text-center my-12	">
         <Button Entradas="Ver más"/>
         </div>
   </div>

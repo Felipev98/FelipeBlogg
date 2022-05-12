@@ -1,5 +1,5 @@
 <template>
-    <div class="h-98	">
+    <div>
           <div class="flex flex-row justify-around">
           <router-link class="w-1/4 shadow-xl	" v-for="article in articles" :to="{ name: 'articles-id', params: {id: article.id} }" :key="article.id">
                   <img class="mb-4	" :src="api_url + article.image.url"   alt="">
