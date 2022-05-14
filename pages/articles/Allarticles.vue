@@ -3,7 +3,7 @@
     <client-only>
     <div>
       <div class="container mx-auto">
-      <h2 class="text-6xl my-8 text-article-title font-bold text-center">{{All}}</h2>
+      <h2 class="md:text-6xl text-4xl	 my-8 text-article-title font-bold  text-center">{{All}}</h2>
         <Articles :articles="articles"></Articles>
       </div>
     </div>

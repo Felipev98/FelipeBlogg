@@ -3,7 +3,7 @@
     <client-only>
     <div>
       <div class="container mx-auto">
-        <h1 class="text-center my-12	 text-6xl	text-article-title">{{ category.name }}</h1>
+        <h1 class="text-center my-12 text-4xl font-bold	md:text-6xl	text-article-title">{{ category.name }}</h1>
 
         <Articles :articles="category.articles || []"></Articles>
 
