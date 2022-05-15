@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center	text-white h-28 bg-button-color">
+  <div class="flex justify-center items-center fixed w-full  bottom-0 h-16 text-white  bg-button-color">
       <span>{{Realizado}}</span>
   </div>
 </template>
