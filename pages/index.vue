@@ -13,6 +13,9 @@
         </div>
   </div>
   <Footer />
+<transition name="home">
+
+</transition>
 </div>
 
 </template>
@@ -31,6 +34,7 @@ export default {
       Bienvenida: "Bienvenido a mi blog"
     }
   },
+  transition:"home",
   components:{
 Articles,Button,Footer,Button
   },
@@ -40,11 +44,13 @@ Articles,Button,Footer,Button
       query: articlesQuery,
       variables () {
         return { id: parseInt(this.$route.params.id) }
-      }
+      },
+      loadingKey: 'loading',
     }
   }
 }
 </script>
 <style>
-
+.home-enter-active, .home-leave-active { transition: opacity .5s; }
+  .home-enter, .home-leave-active { opacity: 0; }
 </style>

@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="text-center my-12	">
-    <button class="w-44 p-4 rounded-3xl bg-button-color text-white" @click="showMore">Más articulos</button>
+    <button class="w-44 p-4 mb-32	 rounded-3xl bg-button-color text-white" @click="showMore">{{loading ? 'Loading...' : 'Ver más'}}</button>
 
     </div>
   </client-only>
@@ -25,7 +25,8 @@ export default {
     return {
       start:0,
       amoutofArticles:3,
-      All: "Todos los Articulos"
+      All: "Todos los Articulos",
+      loading:0
     }
   },
   components: {
@@ -40,6 +41,7 @@ Articles,Footer
                 limit: this.amoutofArticles
         }
       },
+      loadingKey: 'loading',
     },
     
   },

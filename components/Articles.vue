@@ -17,7 +17,7 @@ import articlesQuery  from '../apollo/queries/articles/Articles'
 export default {
   data() {
     return {
-      api_url: process.env.strapiBaseUri
+      api_url: process.env.strapiBaseUri,
     }
   },
   props: {
