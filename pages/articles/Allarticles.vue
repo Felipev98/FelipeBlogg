@@ -4,12 +4,10 @@
     <div>
       <div class="container mx-auto">
       <h2 class="md:text-6xl text-4xl	 my-8 text-article-title font-bold  text-center">{{All}}</h2>
+      <div class="mb-32	">
         <Articles :articles="articles"></Articles>
       </div>
-    </div>
-    <div class="text-center my-12	">
-    <button class="w-44 p-4 mb-32	 rounded-3xl bg-button-color text-white" @click="showMore">{{loading ? 'Loading...' : 'Ver más'}}</button>
-
+      </div>
     </div>
   </client-only>
   <Footer/>
@@ -36,34 +34,9 @@ Articles,Footer
     articles: {
       prefetch: true,
       query: articlesQuery,
-      variables () {
-        return { id: parseInt(this.$route.params.id), 
-                limit: this.amoutofArticles
-        }
-      },
-      loadingKey: 'loading',
     },
     
   },
-   methods: {
-    showMore () {
-      // Fetch more data and transform the original result
-      this.$apollo.queries.articles.fetchMore({
-        // New variables
-        variables: {
-          start:this.start += this.amoutofArticles
-        },
-        // Transform the previous result with new data
-        updateQuery: (previousResult, { fetchMoreResult }) => {
-          return {
-              __typename: previousResult.articles.__typename,
-              // Merging the tag list
-              articles: [...previousResult.articles, ...fetchMoreResult.articles]
-          }
-        },
-        
-      })
-    },
-        }
+
 }
 </script>

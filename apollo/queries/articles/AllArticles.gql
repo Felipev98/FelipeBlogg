@@ -1,5 +1,5 @@
-query Articles($limit:Int, $start:Int,) {
-  articles( limit:$limit, start:$start) {
+query Articles {
+  articles {
     id
     title
     content

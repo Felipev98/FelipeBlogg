@@ -2,7 +2,7 @@
   <div>
     <div class=" md:container md:mx-auto ">
        <div v-if="article.image" id="banner" :data-src="api_url + article.image.url" >
-      <img :src="api_url + article.image.url" class="md:w-1/2 m-auto mt-8 px-4 md:px-0 w-full" alt="">
+      <img :src="article.image.url" class="md:w-1/2 m-auto mt-8 px-4 md:px-0 w-full" alt="">
         <h1 class="text-center text-5xl	 md:text-6xl	font-bold text-article-title	">{{ article.title }}</h1>
       </div>
       <div >
