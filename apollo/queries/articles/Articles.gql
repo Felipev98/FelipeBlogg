@@ -1,5 +1,5 @@
 query Articles {
-  articles( limit:3, sort:"Publishedat:desc") {
+  articles( limit:3, sort:"publishedat:desc") {
     id
     title
     content
